@@ -107,15 +107,15 @@ public class Triangle {
         GLES30.glVertexAttribPointer(maPositionHandle,
                                  3,
                                      GLES30.GL_FLOAT,
-                            false,
-                                0, // 3 * 4
+                                false,
+                                3 * 4, //表示相邻顶点数据的间隔，单位为字节
                                       mVertexBuffer);
         //将顶点颜色数据传送进渲染管线
         GLES30.glVertexAttribPointer(maColorHandle,
                                  4,
                                      GLES30.GL_FLOAT,
-                            false,
-                               0, // 4 * 4
+                               false,
+                               4 * 4, //表示相邻顶点数据的间隔，单位为字节
                                      mColorBuffer);
         ///启用顶点位置数据
         GLES30.glEnableVertexAttribArray(maPositionHandle);

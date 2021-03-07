@@ -55,7 +55,7 @@ public class MyGLSurfaceView extends GLSurfaceView {
 
             //计算产生透视投影矩阵
             Matrix.frustumM(Triangle.mProjMatrix,0, -ratio, ratio, -1, 1, 1, 10);
-            //计算产生摄像机9参数未知矩阵
+            //计算产生摄像机9参数位置矩阵
             Matrix.setLookAtM(Triangle.mVMatrix, 0, 0, 0, 3, 0f, 0f,0f,0f,1.0f,0.0f);
         }
 
